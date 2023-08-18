@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Data Processor</title>
+</head>
+
+<body>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        Prompt: <input type="text" name="prompt" required><br><br>
+        Upload a CSV/PDF: <input type="file" name="file" accept=".csv,.pdf"><br><br>
+        <input type="submit" value="Process">
+    </form>
+
+</body>
+
+</html>
