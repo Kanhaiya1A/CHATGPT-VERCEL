@@ -21,7 +21,7 @@ const OPENAI_API_KEY = OPENAI_API_KEY_D.replace(/A/g, "");
 app.use(express.static("public"));
 
 const storage = multer.diskStorage({
-  destination: "./uploads/",
+  destination: "/tmp",
   filename: function (req, file, cb) {
     cb(null, file.fieldname + "-" + Date.now() + "-" + file.originalname);
   },
