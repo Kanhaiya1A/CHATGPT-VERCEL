@@ -4,15 +4,19 @@ const axios = require("axios");
 const csv = require("csv-parser");
 const pdf = require("pdf-parse");
 const fs = require("fs");
+const bodyParser = require("body-parser");
 require('dotenv').config();
 
 
 const app = express();
 const port = 3000;
+app.use(bodyParser.urlencoded({ extended: false }));
+
 
 const OPENAI_API_URL =
   "https://api.openai.com/v1/engines/text-davinci-003/completions";
-const OPENAI_API_KEY = process.env.CHATGPT_KEY;//"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";
+const OPENAI_API_KEY_D = process.env.CHATGPT_KEY; 
+const OPENAI_API_KEY = process.env.CHATGPT_KEY.replace(/A/g, "");
 
 app.use(express.static("public"));
 
