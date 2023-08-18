@@ -15,8 +15,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const OPENAI_API_URL =
   "https://api.openai.com/v1/engines/text-davinci-003/completions";
-const OPENAI_API_KEY_D = process.env.CHATGPT_KEY; 
-const OPENAI_API_KEY = process.env.CHATGPT_KEY.replace(/A/g, "");
+const OPENAI_API_KEY_D = process.env.SECRETE_KEY; 
+const OPENAI_API_KEY = OPENAI_API_KEY_D.replace(/A/g, "");
 
 app.use(express.static("public"));
 
